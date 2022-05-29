@@ -3,7 +3,7 @@ import axios from 'axios';
 import Logo from '../Logo';
 import Button from '../Button';
 import Input from '../Input';
-import { Container, StyledLink } from './styles';
+import { Container, StyledLink } from './style';
 
 export default function CadastroPage() {
   const [formData, setFormData] = useState({

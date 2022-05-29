@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import UserContext from "./components/contexts/UserContext";
-import LoginPage from "./components/Login";
+import UserContext from "./contexts/UserContext";
+import LoginPage from "./components/LoginPage";
 import CadastroPage from "./components/CadastroPage";
 import HabitosPage from "./components/HabitosPage";
 import HojePage from "./components/HojePage";
