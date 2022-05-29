@@ -9,7 +9,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-background-color: #F60919;
 `;
 
 const StyledLink = styled(Link)`
@@ -17,7 +16,7 @@ height: 40px;
 display: flex;
 justify-content: center;
 align-items: center;
-color: #FFFFFF;
+color: #52B6FF;
 `;
 
 export {
