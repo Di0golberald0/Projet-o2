@@ -1,4 +1,4 @@
-import { CircularProgressbar, CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { Container, StyledLink } from "./style";
 import { useContext } from "react";
@@ -15,10 +15,12 @@ export default function Footer() {
             background
             backgroundPadding={6}
             styles={buildStyles({
-                 width: "50%",
+                 width: "90px",
+                 height: "90px",
+                 margin: "0px 0px 70px",
                  backgroundColor: "#52B6FF",
-                 textColor: "##FFFFFF",
-                 pathColor: "##FFFFFF",
+                 textColor: "#FFFFFF",
+                 pathColor: "#FFFFFF",
                  trailColor: "transparent"
             })} />
             <StyledLink to="/historico">Histórico</StyledLink>
