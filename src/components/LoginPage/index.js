@@ -1,18 +1,14 @@
 import axios from "axios";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import UserContext from "../../contexts/UserContext";
 import Button from "../Button";
 import Input from "../Input";
 import { Container, StyledLink } from "./style";
 
-export default function LoginPage() {
+export default function LoginPage({ setUser, setToken }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-  const { setToken } = useContext(UserContext);
-  const { setUser } = useContext(UserContext);
 
   function handleLogin(e) {
     e.preventDefault();

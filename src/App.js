@@ -10,20 +10,19 @@ import HistoricoPage from "./components/HistoricoPage";
 export default function App() {
   const [token, setToken] = useState("");
   const [user, setUser] = useState(null);
+  const [progress, setProgress] = useState(0);
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
-      <UserContext.Provider value={{ token, setToken }}>
-         <BrowserRouter>
-           <Routes>
-             <Route path="/" element={<LoginPage />} />
+    <UserContext.Provider value={{ user, token, progress }}>
+        <BrowserRouter>
+          <Routes>
+             <Route path="/" element={<LoginPage setToken={setToken} setUser={setUser} />} />
              <Route path="/cadastro" element={<CadastroPage />} />
-             <Route path="/habitos" element={<HabitosPage />} />
-             <Route path="/hoje" element={<HojePage />} />
+             <Route path="/habitos" element={<HabitosPage setProgress={setProgress} />} />
+             <Route path="/hoje" element={<HojePage setProgress={setProgress} />} />
              <Route path="/historico" element={<HistoricoPage />} />
-           </Routes>
-         </BrowserRouter>
-      </UserContext.Provider>
+          </Routes>
+        </BrowserRouter>
     </UserContext.Provider>
   );
 }
