@@ -20,15 +20,15 @@ export default function LoginPage() {
     const promise = axios.post(
       "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login",
       {
-        email: {email},
-        password: {password}
+        email: email,
+        password: password
       }
     );
 
     promise.then((response) => {
       setUser(response.data);
       setToken(response.data.token);
-      navigate("/hoje");
+      navigate("/habitos");
     });
     promise.catch((error) => console.log(error.response));
   }

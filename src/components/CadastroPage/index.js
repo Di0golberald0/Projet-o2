@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Logo from '../Logo';
 import Button from '../Button';
 import Input from '../Input';
 import { Container, StyledLink } from './style';
 
 export default function CadastroPage() {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
+    name: '',
     image: '',
     password: ''
   });
@@ -31,7 +30,6 @@ export default function CadastroPage() {
 
   return (
     <Container>
-      <Logo />
       <form onSubmit={handleSignUp}>
         <Input
           type="email"
