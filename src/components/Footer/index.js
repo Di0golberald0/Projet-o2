@@ -12,12 +12,11 @@ export default function Footer() {
             <CircularProgressbar
             value={progress}
             text={<StyledLink to="/hoje">Hoje</StyledLink>}
+            radius={90}
+            margin-bottom={70}
             background
             backgroundPadding={6}
             styles={buildStyles({
-                 width: "90px",
-                 height: "90px",
-                 margin: "0px 0px 70px",
                  backgroundColor: "#52B6FF",
                  textColor: "#FFFFFF",
                  pathColor: "#FFFFFF",
